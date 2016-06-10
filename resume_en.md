@@ -5,6 +5,6 @@ permalink: /resume-en/
 ---
 
 # Alexey Kolesnikov
-## web developer
-* * *
+## web developer, russia, khabarovsk city 680000, +79098241133
+***
 
