@@ -12,7 +12,7 @@ permalink: /resume-en/
 
 Technical Skills
 
-Platforms: Microsoft Windows 98/2000/NT/XP/2003/VISTA/7/2008, Linux Debian and Arch based
+Platforms: Microsoft Windows 98/2000/NT/XP/2003/VISTA/7/2008, **Linux Debian and Arch based**
 
 Languages: C/C++, Java, Unix and Windows Scripting, Python, Turbo Pascal, PHP and HTML, Ruby
 
