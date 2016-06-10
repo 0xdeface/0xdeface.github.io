@@ -17,7 +17,18 @@
       <div class="container">
         <h1>0xdeface</h1>
         <h2></h2>
-        {{ site.posts }}
+
+        <ul>
+          {% for post in site.posts %}
+          <li>
+            <a href="{{ post.url }}">
+              {{ post.title }}
+            </a>
+            <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+          </li>
+          {% endfor %}
+        </ul>
+
         <section id="downloads">
           <a href="https://github.com/0xdeface" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
