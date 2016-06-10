@@ -10,7 +10,7 @@ permalink: /resume-en/
 
 ***
 
-Technical Skills
+### Technical Skills
 
 Platforms: Microsoft Windows 98/2000/NT/XP/2003/VISTA/7/2008, **Linux Debian and Arch based**
 
