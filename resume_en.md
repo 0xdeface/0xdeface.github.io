@@ -6,7 +6,7 @@ permalink: /resume-en/
 
 ## Alexey Kolesnikov
 
-# web developer, russia, khabarovsk city 680000, +79098241133
+# web developer, Russia, Khabarovsk city 680000, +79098241133. root[at]0xdeface.pro
 
 ***
 
