@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://0xdeface.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Windows | My Octopress Blog]]></title>
+  <link href="http://0xdeface.github.io/blog/categories/windows/atom.xml" rel="self"/>
   <link href="http://0xdeface.github.io/"/>
   <updated>2019-05-22T17:39:48+10:00</updated>
   <id>http://0xdeface.github.io/</id>
