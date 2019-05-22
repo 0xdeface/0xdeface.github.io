@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Windows | My Octopress Blog]]></title>
+  <title><![CDATA[Category: Windows | 0xDEFACE]]></title>
   <link href="http://0xdeface.github.io/blog/categories/windows/atom.xml" rel="self"/>
   <link href="http://0xdeface.github.io/"/>
-  <updated>2019-05-22T17:39:48+10:00</updated>
+  <updated>2019-05-22T18:12:12+10:00</updated>
   <id>http://0xdeface.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Alexey Kolesnikov]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
