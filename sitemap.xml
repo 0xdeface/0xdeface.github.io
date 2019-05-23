@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://0xdeface.github.io/blog/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk/</loc>
+<lastmod>2019-05-23T14:43:38+10:00</lastmod>
+</url>
+<url>
 <loc>http://0xdeface.github.io/blog/2019/05/22/oshibka-mshta-dot-exe/</loc>
 <lastmod>2019-05-22T17:37:47+10:00</lastmod>
 </url>
@@ -12,5 +16,8 @@
 </url>
 <url>
 <loc>http://0xdeface.github.io/blog/categories/windows/</loc>
+</url>
+<url>
+<loc>http://0xdeface.github.io/blog/categories/asterisk/</loc>
 </url>
 </urlset>
