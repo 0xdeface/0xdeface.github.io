@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Python | 0xDEFACE]]></title>
+  <link href="http://0xdeface.github.io/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://0xdeface.github.io/"/>
+  <updated>2019-05-23T15:49:48+10:00</updated>
+  <id>http://0xdeface.github.io/</id>
+  <author>
+    <name><![CDATA[Alexey Kolesnikov]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ошибка при установке/обновлении пакетов в PyCharm]]></title>
+    <link href="http://0xdeface.github.io/blog/2019/05/23/oshibka-pri-ustanovkie-slash-obnovlienii-pakietov-v-pycharm/"/>
+    <updated>2019-05-23T15:34:25+10:00</updated>
+    <id>http://0xdeface.github.io/blog/2019/05/23/oshibka-pri-ustanovkie-slash-obnovlienii-pakietov-v-pycharm</id>
+    <content type="html"><![CDATA[<h2>ОШИБКА ПРИ УСТАНОВКЕ (ОБНОВЛЕНИИ) ПАКЕТОВ ЧЕРЕЗ PYCHARM</h2>
+
+<p>Собственно делюсь маленьким патчем чтобы старенький PyCharm продолжал исправно работать с новым pip
+нужно поправить хелпер, путь к нему есть в описании к ошибке. У меня он /pycharm-2018.1/helpers/packaging_tool.py
+~~~~python</p>
+
+<h1>pycharm-2018.1/helpers/packaging_tool.py</h1>
+
+<p>def do_install(pkgs):
+    try:
+        import pip
+    except ImportError:
+        error_no_pip()
+    if hasattr(pip,&lsquo;main&rsquo;):
+        return pip.main([&lsquo;install&rsquo;] + pkgs)
+    else:
+        from pip._internal import main
+        return main([&lsquo;install&rsquo;] + pkgs)
+~~~~</p>
+]]></content>
+  </entry>
+  
+</feed>

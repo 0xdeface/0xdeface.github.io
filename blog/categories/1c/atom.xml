@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 1c | 0xDEFACE]]></title>
+  <link href="http://0xdeface.github.io/blog/categories/1c/atom.xml" rel="self"/>
+  <link href="http://0xdeface.github.io/"/>
+  <updated>2019-05-23T15:49:48+10:00</updated>
+  <id>http://0xdeface.github.io/</id>
+  <author>
+    <name><![CDATA[Alexey Kolesnikov]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Диагностика соденинения с офд]]></title>
+    <link href="http://0xdeface.github.io/blog/2019/05/23/diaghnostika-sodieninieniia-s-ofd/"/>
+    <updated>2019-05-23T15:33:00+10:00</updated>
+    <id>http://0xdeface.github.io/blog/2019/05/23/diaghnostika-sodieninieniia-s-ofd</id>
+    <content type="html"><![CDATA[<h2>ДИАГНОСТИКА СОЕДИНЕНИЯ С ОФД В АТОЛ</h2>
+
+<p>Полезная штука для 8 версии ДТО, в тесте драйвера такой возможности нет, но благодаря командам нижнего уровня можем получить информацию о своих настройках и кратком тесте ОФД</p>
+
+<pre><code>82 01 06 00
+</code></pre>
+
+<p>в результате получим чек с заголовком &ldquo;Диагности соединения с ОФД&rdquo; с адресом, портом, типом соединения и его статусом, очень полезная информация. Так же не забываем смотреть логи, пути к логам устанавливаются в приложении &ldquo;Управление драйверами&rdquo;</p>
+
+<p>Если в ответе увидите что EoU не найдено или не установлено, или в логах EoU строку &ldquo;U2E_TLV_RX_REQUEST_VERSION&rdquo; повторяющуюся очень много раз то проверьте какие драйвера используются для COM портов, если от Microsoft то их нужно заменить на ATOL</p>
+]]></content>
+  </entry>
+  
+</feed>
