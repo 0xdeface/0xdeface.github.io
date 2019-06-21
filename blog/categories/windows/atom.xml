@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Windows | 0xDEFACE]]></title>
+  <link href="http://0xdeface.github.io/blog/categories/windows/atom.xml" rel="self"/>
+  <link href="http://0xdeface.github.io/"/>
+  <updated>2019-06-21T11:23:11+10:00</updated>
+  <id>http://0xdeface.github.io/</id>
+  <author>
+    <name><![CDATA[Alexey Kolesnikov]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Ошибка mshta.exe]]></title>
+    <link href="http://0xdeface.github.io/blog/2019/05/22/oshibka-mshta-dot-exe/"/>
+    <updated>2019-05-22T17:37:47+10:00</updated>
+    <id>http://0xdeface.github.io/blog/2019/05/22/oshibka-mshta-dot-exe</id>
+    <content type="html"><![CDATA[<p>Если получили ошибку обновите/установите следующие пакеты, это должно помочь</p>
+
+<p><a href="http://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x64.exe">http://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x64.exe</a></p>
+
+<p><a href="https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows">https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows</a></p>
+]]></content>
+  </entry>
+  
+</feed>

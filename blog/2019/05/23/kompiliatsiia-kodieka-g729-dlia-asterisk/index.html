@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Компиляция кодека G729 для Asterisk - 0xDEFACE</title>
+  <meta name="author" content="Alexey Kolesnikov">
+
+  
+  <meta name="description" content="Зачем компилировать кодек G.729 ? Как мы будем это делать?
+G.729 использует специальные алгоритмы сжатия для уменьшения затрат на ширину передачи &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://0xdeface.github.io/blog/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="0xDEFACE" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">0xDEFACE</a></h1>
+  
+    <h2>Blog about technologies, books, my thoughts and freedom</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+    <li>
+  <a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a>
+    </li> 
+
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="0xdeface.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Компиляция кодека G729 для Asterisk</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2019-05-23T14:43:38+10:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2019</span></span> <span class='time'>2:43 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Зачем компилировать кодек G.729 ? Как мы будем это делать?<br/>
+G.729 использует специальные алгоритмы сжатия для уменьшения затрат на ширину передачи данных.<br/>
+G.729 поддерживается многими (почти всеми) телефонами.
+G.729 дает звук хорошего качества
+Мы будем использовать bcg729 для сборки, он несколько медленне чем INTEL IPP, но особенной разницы я не заметил.</p>
+
+<p>Что нужно для компиляции G.729 для вашего Asterisk
+* сам Астериск
+* asterisk-dev
+* bcg729
+* build-essential
+* libtool
+Я компилировал все для Raspbery PI, имейте это ввиду при копи пасте</p>
+
+<p>Компиляция bcg729
+перед компиляцией библиотеки bcg729 нам нужно будет поменять стандартый путь, для того чтобы астериск смог ее видеть при загрузке кодека.</p>
+
+<p>скачаем bcg</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">wget http://0xdeface.pro/media/filer_public/73/7c/737ca604-a14e-4634-b1e7-6cac78376de9/bcg729-100tar.gz</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>или склонируем</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">git clone git://git.linphone.org/bcg729.git</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>разархивируем если нужно и сконфигурируем с нужным путем</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">./configure --libdir=/lib</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Соберем и установим bcg729</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">make  </span>
+</span><span class='line'><span class="go">sudo make install</span>
+</span><span class='line'><span class="go"> ```</span>
+</span><span class='line'>
+</span><span class='line'><span class="go">Компиляция кодека g729</span>
+</span><span class='line'><span class="go">Сейчас мы скачаем, скомпилируем и установим g729. Обратите внимание что при конфигурации возможно нужно будет указать версию астериска, допустим я конфигурировал вот так  ./configure --with-bcg729 --with-asterisk18 (в справке видно варианты)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>console
+wget <a href="http://0xdeface.pro/media/filer_public/73/7c/737ca604-a14e-4634-b1e7-6cac78376de9/bcg729-100tar.gz">http://0xdeface.pro/media/filer_public/73/7c/737ca604-a14e-4634-b1e7-6cac78376de9/bcg729-100tar.gz</a>
+tar xjf asterisk-g72x-1.2.tar.bz2 $ cd asterisk-g72x-1.2
+./autogen.sh
+./configure &ndash;with-bcg729
+make
+sudo make install</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">Тестируем астериск на присутствие кодека</span>
+</span><span class='line'><span class="go">перезагрузим астер</span>
+</span><span class='line'>
+</span><span class='line'><span class="go">sudo systemctl asterisk restart   </span>
+</span><span class='line'><span class="go">или тем кто все еще не перешел на systemd  _service restart asterisk_</span>
+</span><span class='line'>
+</span><span class='line'><span class="go">Подключаемся к консоли астериска </span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>console
+sudo asterisk -rvvv</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">Пересчитаем тайминги и посмотрим какие кодеки у нас есть:</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>console
+core show translation recalc 10
+```</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Alexey Kolesnikov</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2019-05-23T14:43:38+10:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2019</span></span> <span class='time'>2:43 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/asterisk/'>asterisk</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://0xdeface.github.io/blog/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk/" data-via="un1qum" data-counturl="http://0xdeface.github.io/blog/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2019/05/22/oshibka-mshta-dot-exe/" title="Previous Post: Ошибка mshta.exe">&laquo; Ошибка mshta.exe</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2019/05/23/sbierbank-kody-oshibok-ekvairingha/" title="Next Post: Сбербанк коды ошибок эквайринга">Сбербанк коды ошибок эквайринга &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2019/05/23/knigha-gholdstieina-iz-1984/">книга голдстейна из 1984</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/05/23/openvpn-siervier-na-bazie-mikrotik/">OpenVPN сервер на базе Mikrotik</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/05/23/oshibka-pri-ustanovkie-slash-obnovlienii-pakietov-v-pycharm/">Ошибка при установке/обновлении пакетов в PyCharm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/05/23/diaghnostika-sodieninieniia-s-ofd/">Диагностика соденинения с офд</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/05/23/sbierbank-kody-oshibok-ekvairingha/">Сбербанк коды ошибок эквайринга</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/0xdeface">@0xdeface</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: '0xdeface',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2019 - Alexey Kolesnikov -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = '0xdeface-pro';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://0xdeface.github.io/blog/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk/';
+        var disqus_url = 'http://0xdeface.github.io/blog/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

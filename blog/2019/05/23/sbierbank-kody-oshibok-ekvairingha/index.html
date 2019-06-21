@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Сбербанк коды ошибок эквайринга - 0xDEFACE</title>
+  <meta name="author" content="Alexey Kolesnikov">
+
+  
+  <meta name="description" content="СБРФ - ЭКВАЙРИНГ ОТ СБЕРБАНКА Команды ( функции ) библиотеки сбрф, пригодятся для чтения логов и доработки функционала: 4000 Оплата покупки
+4001 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://0xdeface.github.io/blog/2019/05/23/sbierbank-kody-oshibok-ekvairingha/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="0xDEFACE" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">0xDEFACE</a></h1>
+  
+    <h2>Blog about technologies, books, my thoughts and freedom</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+    <li>
+  <a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a>
+    </li> 
+
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="0xdeface.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Сбербанк коды ошибок эквайринга</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2019-05-23T15:30:36+10:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2019</span></span> <span class='time'>3:30 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>СБРФ - ЭКВАЙРИНГ ОТ СБЕРБАНКА</h2>
+
+<p>Команды ( функции )   библиотеки сбрф, пригодятся для чтения логов и доработки функционала:</p>
+
+<p>4000 Оплата покупки<br/>
+4001 Выдача наличных<br/>
+4002 Возврат покупки<br/>
+4003 Отмена операции<br/>
+4004 Безналичный перевод при наличии карты клиента<br/>
+4005 Безналичный перевод при отсутствии карты клиента<br/>
+4006 Ввод слипа по картам Amex<br/>
+4007 Слип оплаты<br/>
+4008 Слип выдачи наличных<br/>
+4009 Предавторизация<br/>
+4010 Завершение расчета<br/>
+4011 Взнос наличных (предварительное зачисление)<br/>
+4012 Взнос наличных (подтверждение)<br/>
+4013 Погашение кредита<br/>
+4014 Перевод с карты на карту<br/>
+4015 Коммунальный платеж<br/>
+4016 Арест средств<br/>
+4017 Списание по аресту<br/>
+4018 Снятие (отмена) ареста<br/>
+4019 Выдача наличных без карты<br/>
+4020 Списание по требованию<br/>
+4021 Создание ПИН-кода<br/>
+4022 Смена ПИН-кода<br/>
+4023 Оплата услуг банка<br/>
+4024 Запись отпечатков пальцев на карту ПРО100<br/>
+4025 Установка оффлайн-лимита карты ПРО100<br/>
+4026 Распечатка истории операций по карте ПРО100<br/>
+<strong>Возвращаемые данные</strong><br/>
+Число AmountClear - сумма операции без учета комиссии / скидки<br/>
+Число Amount - сумма операции с учетом комиссии / скидки<br/>
+строка CardName - название карты (Visa, Maestro и т.д.)<br/>
+число CardType - тип карты<br/>
+строка TrxDate - дата операции (ДД.ММ.ГГГГ)<br/>
+строка TrxTime - время операции (ЧЧ:ММ:СС)<br/>
+строка TermNum - номер терминала<br/>
+строка MerchNum - номер мерчанта<br/>
+строка AuthCode - код авторизации<br/>
+строка RRN -номер ссылки<br/>
+число MerchantTSN - номер транзакции в пакете терминала<br/>
+число MerchantBatchNum - номер пакета терминала по магн.картам<br/>
+строка ClientCard - номер карты клиента<br/>
+строка ClientExpiryDate - срок действия карты клиента</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Alexey Kolesnikov</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2019-05-23T15:30:36+10:00'><span class='date'><span class='date-month'>May</span> <span class='date-day'>23</span><span class='date-suffix'>rd</span>, <span class='date-year'>2019</span></span> <span class='time'>3:30 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/1s/'>1с</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://0xdeface.github.io/blog/2019/05/23/sbierbank-kody-oshibok-ekvairingha/" data-via="un1qum" data-counturl="http://0xdeface.github.io/blog/2019/05/23/sbierbank-kody-oshibok-ekvairingha/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk/" title="Previous Post: Компиляция кодека g729 для asterisk">&laquo; Компиляция кодека g729 для asterisk</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2019/05/23/diaghnostika-sodieninieniia-s-ofd/" title="Next Post: Диагностика соденинения с офд">Диагностика соденинения с офд &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2019/05/23/knigha-gholdstieina-iz-1984/">книга голдстейна из 1984</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/05/23/openvpn-siervier-na-bazie-mikrotik/">OpenVPN сервер на базе Mikrotik</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/05/23/oshibka-pri-ustanovkie-slash-obnovlienii-pakietov-v-pycharm/">Ошибка при установке/обновлении пакетов в PyCharm</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/05/23/diaghnostika-sodieninieniia-s-ofd/">Диагностика соденинения с офд</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2019/05/23/sbierbank-kody-oshibok-ekvairingha/">Сбербанк коды ошибок эквайринга</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/0xdeface">@0xdeface</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: '0xdeface',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2019 - Alexey Kolesnikov -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = '0xdeface-pro';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://0xdeface.github.io/blog/2019/05/23/sbierbank-kody-oshibok-ekvairingha/';
+        var disqus_url = 'http://0xdeface.github.io/blog/2019/05/23/sbierbank-kody-oshibok-ekvairingha/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

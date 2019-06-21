@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Asterisk | 0xDEFACE]]></title>
+  <link href="http://0xdeface.github.io/blog/categories/asterisk/atom.xml" rel="self"/>
+  <link href="http://0xdeface.github.io/"/>
+  <updated>2019-06-21T11:23:11+10:00</updated>
+  <id>http://0xdeface.github.io/</id>
+  <author>
+    <name><![CDATA[Alexey Kolesnikov]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Компиляция кодека G729 для Asterisk]]></title>
+    <link href="http://0xdeface.github.io/blog/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk/"/>
+    <updated>2019-05-23T14:43:38+10:00</updated>
+    <id>http://0xdeface.github.io/blog/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk</id>
+    <content type="html"><![CDATA[<p>Зачем компилировать кодек G.729 ? Как мы будем это делать?<br/>
+G.729 использует специальные алгоритмы сжатия для уменьшения затрат на ширину передачи данных.<br/>
+G.729 поддерживается многими (почти всеми) телефонами.
+G.729 дает звук хорошего качества
+Мы будем использовать bcg729 для сборки, он несколько медленне чем INTEL IPP, но особенной разницы я не заметил.</p>
+
+<p>Что нужно для компиляции G.729 для вашего Asterisk
+* сам Астериск
+* asterisk-dev
+* bcg729
+* build-essential
+* libtool
+Я компилировал все для Raspbery PI, имейте это ввиду при копи пасте</p>
+
+<p>Компиляция bcg729
+перед компиляцией библиотеки bcg729 нам нужно будет поменять стандартый путь, для того чтобы астериск смог ее видеть при загрузке кодека.</p>
+
+<p>скачаем bcg
+<code>console
+wget http://0xdeface.pro/media/filer_public/73/7c/737ca604-a14e-4634-b1e7-6cac78376de9/bcg729-100tar.gz
+</code>
+или склонируем
+<code>console
+git clone git://git.linphone.org/bcg729.git
+</code>
+разархивируем если нужно и сконфигурируем с нужным путем
+<code>console
+./configure --libdir=/lib
+</code>
+Соберем и установим bcg729
+<code>console
+make  
+sudo make install
+</code></p>
+
+<p>Компиляция кодека g729
+Сейчас мы скачаем, скомпилируем и установим g729. Обратите внимание что при конфигурации возможно нужно будет указать версию астериска, допустим я конфигурировал вот так  ./configure &ndash;with-bcg729 &ndash;with-asterisk18 (в справке видно варианты)
+<code>console
+wget http://0xdeface.pro/media/filer_public/73/7c/737ca604-a14e-4634-b1e7-6cac78376de9/bcg729-100tar.gz
+tar xjf asterisk-g72x-1.2.tar.bz2 $ cd asterisk-g72x-1.2
+./autogen.sh
+./configure --with-bcg729
+make
+sudo make install
+</code></p>
+
+<p>Тестируем астериск на присутствие кодека
+перезагрузим астер</p>
+
+<p>sudo systemctl asterisk restart <br/>
+или тем кто все еще не перешел на systemd  <em>service restart asterisk</em></p>
+
+<p>Подключаемся к консоли астериска
+<code>console
+sudo asterisk -rvvv   
+</code>
+Пересчитаем тайминги и посмотрим какие кодеки у нас есть:
+<code>console
+core show translation recalc 10
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
