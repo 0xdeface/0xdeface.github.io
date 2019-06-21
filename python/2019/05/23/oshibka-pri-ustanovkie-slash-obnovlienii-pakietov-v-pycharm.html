@@ -44,6 +44,10 @@
         
           
         
+          
+        
+          
+        
       </div>
     </nav>
 
@@ -62,22 +66,21 @@
   </header>
 
   <article class="post-content">
-    <h2 id="pycharm">ОШИБКА ПРИ УСТАНОВКЕ (ОБНОВЛЕНИИ) ПАКЕТОВ ЧЕРЕЗ PYCHARM</h2>
+    <h2 id="ошибка-при-установке-обновлении-пакетов-через-pycharm">ОШИБКА ПРИ УСТАНОВКЕ (ОБНОВЛЕНИИ) ПАКЕТОВ ЧЕРЕЗ PYCHARM</h2>
 <p>Собственно делюсь маленьким патчем чтобы старенький PyCharm продолжал исправно работать с новым pip
-нужно поправить хелпер, путь к нему есть в описании к ошибке. У меня он /pycharm-2018.1/helpers/packaging_tool.py
-~~~~python
-# pycharm-2018.1/helpers/packaging_tool.py
-def do_install(pkgs):
-    try:
-        import pip
-    except ImportError:
-        error_no_pip()
-    if hasattr(pip,’main’):
-        return pip.main([‘install’] + pkgs)
-    else:
-        from pip._internal import main
-        return main([‘install’] + pkgs)
-~~~~</p>
+нужно поправить хелпер, путь к нему есть в описании к ошибке. У меня он /pycharm-2018.1/helpers/packaging_tool.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># pycharm-2018.1/helpers/packaging_tool.py</span>
+<span class="k">def</span> <span class="nf">do_install</span><span class="p">(</span><span class="n">pkgs</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">pip</span>
+    <span class="k">except</span> <span class="nb">ImportError</span><span class="p">:</span>
+        <span class="n">error_no_pip</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pip</span><span class="p">,</span><span class="s">'main'</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">pip</span><span class="o">.</span><span class="n">main</span><span class="p">([</span><span class="s">'install'</span><span class="p">]</span> <span class="o">+</span> <span class="n">pkgs</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">pip._internal</span> <span class="kn">import</span> <span class="n">main</span>
+        <span class="k">return</span> <span class="n">main</span><span class="p">([</span><span class="s">'install'</span><span class="p">]</span> <span class="o">+</span> <span class="n">pkgs</span><span class="p">)</span>
+</code></pre></div></div>
 
   </article>
      <div id="disqus_thread"></div>
