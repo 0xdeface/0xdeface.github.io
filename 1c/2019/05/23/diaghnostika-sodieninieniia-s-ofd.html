@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Your awesome title</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+  <title>Диагностика соденинения с офд</title>
+  <meta name="description" content="ДИАГНОСТИКА СОЕДИНЕНИЯ С ОФД В АТОЛПолезная штука для 8 версии ДТО, в тесте драйвера такой возможности нет, но благодаря командам нижнего уровня можем получи...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/">
+  <link rel="canonical" href="http://yourdomain.com/1c/2019/05/23/diaghnostika-sodieninieniia-s-ofd.html">
   <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -55,79 +54,25 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title">Диагностика соденинения с офд</h1>
+    <p class="post-meta">May 23, 2019</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jun 21, 2019</span>
+  <article class="post-content">
+    <h2 id="section">ДИАГНОСТИКА СОЕДИНЕНИЯ С ОФД В АТОЛ</h2>
+<p>Полезная штука для 8 версии ДТО, в тесте драйвера такой возможности нет, но благодаря командам нижнего уровня можем получить информацию о своих настройках и кратком тесте ОФД</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2019/06/21/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
+<p><code>
+82 01 06 00
+</code>
+в результате получим чек с заголовком “Диагности соединения с ОФД” с адресом, портом, типом соединения и его статусом, очень полезная информация. Так же не забываем смотреть логи, пути к логам устанавливаются в приложении “Управление драйверами”</p>
 
-        <h2>
-          <a class="post-link" href="/%D1%84%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D0%B8%D1%8F/2019/05/23/knigha-gholdstieina-iz-1984.html">книга голдстейна из 1984</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
+<p>Если в ответе увидите что EoU не найдено или не установлено, или в логах EoU строку “U2E_TLV_RX_REQUEST_VERSION” повторяющуюся очень много раз то проверьте какие драйвера используются для COM портов, если от Microsoft то их нужно заменить на ATOL</p>
 
-        <h2>
-          <a class="post-link" href="/mikrotik/2019/05/23/openvpn-siervier-na-bazie-mikrotik.html">OpenVPN сервер на базе Mikrotik</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
-
-        <h2>
-          <a class="post-link" href="/python/2019/05/23/oshibka-pri-ustanovkie-slash-obnovlienii-pakietov-v-pycharm.html">Ошибка при установке/обновлении пакетов в PyCharm</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
-
-        <h2>
-          <a class="post-link" href="/1c/2019/05/23/diaghnostika-sodieninieniia-s-ofd.html">Диагностика соденинения с офд</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
-
-        <h2>
-          <a class="post-link" href="/1%D1%81/2019/05/23/sbierbank-kody-oshibok-ekvairingha.html">Сбербанк коды ошибок эквайринга</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
-
-        <h2>
-          <a class="post-link" href="/asterisk/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk.html">Компиляция кодека g729 для asterisk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 22, 2019</span>
-
-        <h2>
-          <a class="post-link" href="/windows/2019/05/22/oshibka-mshta-dot-exe.html">Ошибка mshta.exe</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  </article>
 
 </div>
 
