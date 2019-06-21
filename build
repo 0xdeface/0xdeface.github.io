@@ -1,0 +1,1 @@
+jekyll b && cd _site && git add . && git commit -m "up" && git push

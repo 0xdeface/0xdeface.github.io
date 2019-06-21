@@ -447,3 +447,7 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+code {
+  display: block;
+  margin: 20px 0; }
