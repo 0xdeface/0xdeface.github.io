@@ -11,81 +11,108 @@
         <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
-        <div class="home">
+        <main class="container">
+  <div class="row">
+    <div class="col-2">
+      <h1>0xDEFACE</h1>
+      <p class="lead">
+          <br/>blog about it, books and my thoughts 
 
-  <h1 class="page-heading">Posts</h1>
+      </p>
+      <article>
+        <h1>Posts</h1>
+      </article>
+      
+      <article>
+        <h1>Ошибка при записи документа в 1с</h1>
+        <p><ul>
+  <li>В 1с ошибка при записи документа ( например чека) или открытия смены возникает в следующих случаях:</li>
+  <li>Идет синхронизация данных которая блокирует таблицы</li>
+  <li>Идет большая транзакция с блокировками</li>
+  <li>Повреждена субд</li>
+  <li>У пользователя не хватает прав на запись или документ не корректен</li>
+</ul>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Aug 16, 2019</span>
+</p>
+        <a href="//2019/08/16/%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0-%D0%BF%D1%80%D0%B8-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0-%D0%B2-1%D1%81.html">[ Read ]</a>
+      </article>
+      
+      <article>
+        <h1>книга голдстейна из 1984</h1>
+        <p><p>В голове глубоко отпечаталась книга 1984 за авторством Джорджа Оруэлла.
+Особенно четко запомнился момент когда главный герой читал книгу “Голдстейна” и мысли в ней. Привожу ее здесь на память. И конечно в ней не содержится откровений, до которых не мог бы додуматься наблюдательный человек со склонностью к критическому мышлению :)</p>
 
-        <h2>
-          <a class="post-link" href="/2019/08/16/%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0-%D0%BF%D1%80%D0%B8-%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B8-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0-%D0%B2-1%D1%81.html">Ошибка при записи документа в 1с</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
+</p>
+        <a href="//%D1%84%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D0%B8%D1%8F/2019/05/23/knigha-gholdstieina-iz-1984.html">[ Read ]</a>
+      </article>
+      
+      <article>
+        <h1>OpenVPN сервер на базе Mikrotik</h1>
+        <p><h2 id="openvpn-на-mikrotik">OPENVPN НА MIKROTIK</h2>
+<p>Первым делом нам нужно создать шаблоны сертификатов</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/certificate
+add name=ca-template common-name=example.com days-valid=3650 key-size=2048 key-usage=crl-sign,key-cert-sign
+add name=server-template common-name=*.example.com days-valid=3650 key-size=2048 key-usage=digital-signature,key-encipherment,tls-server
+add name=client-template common-name=client.example.com days-valid=3650 key-size=2048 key-usage=tls-client
+</code></pre></div></div>
+<p>Для OpenVPN сервера поле common name может быть любым. Сертификаты можно сгенерировать используя утилиту easyrsa, но лично у меня они потом не завелись. Клиенты при подключении получали в журнале TCP recv EOF и в логах микротика я видел TLS_ERROR, поэтому буду рад получить обратную связь если у вас заведется со своими сертификатами.</p>
 
-        <h2>
-          <a class="post-link" href="/%D1%84%D0%B8%D0%BB%D0%BE%D1%81%D0%BE%D1%84%D0%B8%D1%8F/2019/05/23/knigha-gholdstieina-iz-1984.html">книга голдстейна из 1984</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
+</p>
+        <a href="//mikrotik/2019/05/23/openvpn-siervier-na-bazie-mikrotik.html">[ Read ]</a>
+      </article>
+      
+      <article>
+        <h1>Ошибка при установке/обновлении пакетов в PyCharm</h1>
+        <p><h2 id="ошибка-при-установке-обновлении-пакетов-через-pycharm">ОШИБКА ПРИ УСТАНОВКЕ (ОБНОВЛЕНИИ) ПАКЕТОВ ЧЕРЕЗ PYCHARM</h2>
+<p>Собственно делюсь маленьким патчем чтобы старенький PyCharm продолжал исправно работать с новым pip
+нужно поправить хелпер, путь к нему есть в описании к ошибке. У меня он /pycharm-2018.1/helpers/packaging_tool.py</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># pycharm-2018.1/helpers/packaging_tool.py</span>
+<span class="k">def</span> <span class="nf">do_install</span><span class="p">(</span><span class="n">pkgs</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">pip</span>
+    <span class="k">except</span> <span class="nb">ImportError</span><span class="p">:</span>
+        <span class="n">error_no_pip</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">pip</span><span class="p">,</span><span class="s">'main'</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">pip</span><span class="o">.</span><span class="n">main</span><span class="p">([</span><span class="s">'install'</span><span class="p">]</span> <span class="o">+</span> <span class="n">pkgs</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">pip._internal</span> <span class="kn">import</span> <span class="n">main</span>
+        <span class="k">return</span> <span class="n">main</span><span class="p">([</span><span class="s">'install'</span><span class="p">]</span> <span class="o">+</span> <span class="n">pkgs</span><span class="p">)</span>
+</code></pre></div></div>
+</p>
+        <a href="//python/2019/05/23/oshibka-pri-ustanovkie-slash-obnovlienii-pakietov-v-pycharm.html">[ Read ]</a>
+      </article>
+      
+      <article>
+        <h1>Диагностика соденинения с офд</h1>
+        <p><h2 id="диагностика-соединения-с-офд-в-атол">ДИАГНОСТИКА СОЕДИНЕНИЯ С ОФД В АТОЛ</h2>
+<p>Полезная штука для 8 версии ДТО, в тесте драйвера такой возможности нет, но благодаря командам нижнего уровня можем получить информацию о своих настройках и кратком тесте ОФД</p>
 
-        <h2>
-          <a class="post-link" href="/mikrotik/2019/05/23/openvpn-siervier-na-bazie-mikrotik.html">OpenVPN сервер на базе Mikrotik</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
+</p>
+        <a href="//1c/2019/05/23/diaghnostika-sodieninieniia-s-ofd.html">[ Read ]</a>
+      </article>
+      
+      <div class="buttons">
 
-        <h2>
-          <a class="post-link" href="/python/2019/05/23/oshibka-pri-ustanovkie-slash-obnovlienii-pakietov-v-pycharm.html">Ошибка при установке/обновлении пакетов в PyCharm</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
 
-        <h2>
-          <a class="post-link" href="/1c/2019/05/23/diaghnostika-sodieninieniia-s-ofd.html">Диагностика соденинения с офд</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
 
-        <h2>
-          <a class="post-link" href="/1%D1%81/2019/05/23/sbierbank-kody-oshibok-ekvairingha.html">Сбербанк коды ошибок эквайринга</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 23, 2019</span>
-
-        <h2>
-          <a class="post-link" href="/asterisk/2019/05/23/kompiliatsiia-kodieka-g729-dlia-asterisk.html">Компиляция кодека g729 для asterisk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 22, 2019</span>
-
-        <h2>
-          <a class="post-link" href="/windows/2019/05/22/oshibka-mshta-dot-exe.html">Ошибка mshta.exe</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+    <span class="button">
+        <a href="//2/">[ Next -> ]</a>
+    </span>
 
 </div>
+
+    </div>
+    <div class="col-1">
+    <div class="side-board">
+        <h1>About</h1>
+        <img class="about" src=""
+                    alt="Clark"/>
+        <p class="lead"></p>
+    </div>
+</div>
+
+  </div>
+</main>
 
     </body>
 </html>
