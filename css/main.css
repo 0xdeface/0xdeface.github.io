@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap");
 /**
  * Reset some basic elements
  */
@@ -473,7 +474,7 @@ hr {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  font-family: 'Cutive Mono'; }
+  font-family: 'Anonymous Pro', monospace; }
 
 .container .buttons {
   margin-top: 15px;
