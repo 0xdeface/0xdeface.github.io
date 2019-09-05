@@ -6,8 +6,8 @@
 </description>
     <link>http://0xdeface.pro/</link>
     <atom:link href="http://0xdeface.pro/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 05 Sep 2019 11:57:51 +1000</pubDate>
-    <lastBuildDate>Thu, 05 Sep 2019 11:57:51 +1000</lastBuildDate>
+    <pubDate>Thu, 05 Sep 2019 12:01:23 +1000</pubDate>
+    <lastBuildDate>Thu, 05 Sep 2019 12:01:23 +1000</lastBuildDate>
     <generator>Jekyll v3.7.4</generator>
     
       <item>
@@ -414,7 +414,9 @@ sudo make install
     
       <item>
         <title>Ошибка mshta.exe</title>
-        <description>&lt;p&gt;0x876e0003 UpdateEnabled=False DefaultSetup.ini&lt;/p&gt;
+        <description>&lt;p&gt;Если при установке MSSQL ловите ошибку 0x876e0003 
+просто отключите проверку обновления установкой параметра 
+UpdateEnabled=False в файле DefaultSetup.ini&lt;/p&gt;
 </description>
         <pubDate>Wed, 22 May 2019 17:37:47 +1000</pubDate>
         <link>http://0xdeface.pro/windows/2019/05/22/mssql-install-error.html</link>
