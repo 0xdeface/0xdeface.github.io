@@ -3,11 +3,11 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
-<title>404 Page not found | Alexey Kolesnikov - my thoughts about it, life, books</title>
+<title>MSSQL posts | Alexey Kolesnikov - my thoughts about it, life, books</title>
 <meta name=keywords content>
-<meta name=description content="My thoughts about it, life and books">
+<meta name=description content="Contains posts related to PaperMod">
 <meta name=author content="14613198">
-<link rel=canonical href=https://0xdeface.github.io/404.html>
+<link rel=canonical href=https://0xdeface.github.io/posts/mssql/>
 <link crossorigin=anonymous href=/assets/css/stylesheet.min.b50dea21cb69b925c783abc4870e38fef3e55317f404eef2740034ed7a1c0ac5.css integrity="sha256-tQ3qIctpuSXHg6vEhw44/vPlUxf0BO7ydAA07XocCsU=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://0xdeface.github.io/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://0xdeface.github.io/favicon-16x16.png>
@@ -17,14 +17,16 @@
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
 <meta name=generator content="Hugo 0.86.0">
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css><meta property="og:title" content="404 Page not found">
-<meta property="og:description" content="My thoughts about it, life and books">
+<link rel=alternate type=application/rss+xml href=https://0xdeface.github.io/posts/mssql/index.xml>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css><meta property="og:title" content="MSSQL posts">
+<meta property="og:description" content="Contains posts related to PaperMod">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://0xdeface.github.io/404.html"><meta property="og:image" content="https://0xdeface.github.io/papermod-cover.png"><meta property="og:site_name" content="Alexey Kolesnikov">
+<meta property="og:url" content="https://0xdeface.github.io/posts/mssql/"><meta property="og:image" content="https://0xdeface.github.io/papermod-cover.png"><meta property="og:site_name" content="Alexey Kolesnikov">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://0xdeface.github.io/papermod-cover.png">
-<meta name=twitter:title content="404 Page not found">
-<meta name=twitter:description content="My thoughts about it, life and books">
+<meta name=twitter:title content="MSSQL posts">
+<meta name=twitter:description content="Contains posts related to PaperMod">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://0xdeface.github.io/posts/"},{"@type":"ListItem","position":3,"name":"MSSQL posts","item":"https://0xdeface.github.io/posts/mssql/"}]}</script>
 </head>
 <body class=list id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -46,7 +48,37 @@
 </nav>
 </header>
 <main class=main>
-<div class=not-found>404</div>
+<header class=page-header><div class=breadcrumbs><a href=https://0xdeface.github.io>Home</a>&nbsp;»&nbsp;<a href=https://0xdeface.github.io/posts/>Posts</a></div>
+<h1>MSSQL posts</h1>
+<div class=post-description>
+Contains posts related to PaperMod
+</div>
+</header>
+<article class=post-entry>
+<figure class=entry-cover><img loading=lazy src=https://0xdeface.github.io/%3Cimage%20path/url%3E alt>
+</figure>
+<header class=entry-header>
+<h2>MSSQL - Transaction Log</h2>
+</header>
+<section class=entry-content>
+<p>О росте лога транзакции в mssql не претендую на полноту информации, не являюсь DBA Одной из причины роста лога в при использовании AlwaysON может являться отключение вторичной реплики. Лог продолжает рости до тех пор пока вторичная реплика не будет восстановлена.
+-- Для восстановления синхронизации на вторичной реплике use master; ALTER DATABASE [YourDatabaseName] SET HADR RESUME Однако после восстановления лог все равно может не уменьшаться, не смотря на то что в информации о использовании лога транзакции может значится что лог почти не используется....</p>
+</section>
+<footer class=entry-footer>June 4, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;0xDEFACE</footer>
+<a class=entry-link aria-label="post link to MSSQL - Transaction Log" href=https://0xdeface.github.io/posts/mssql/transaction-log/></a>
+</article>
+<article class=post-entry>
+<figure class=entry-cover><img loading=lazy src=https://0xdeface.github.io/%3Cimage%20path/url%3E alt>
+</figure>
+<header class=entry-header>
+<h2>My 1st post</h2>
+</header>
+<section class=entry-content>
+<p></p>
+</section>
+<footer class=entry-footer>May 26, 2021&nbsp;·&nbsp;0 min&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to My 1st post" href=https://0xdeface.github.io/posts/mssql/cluster-notes/></a>
+</article>
 </main>
 <footer class=footer>
 <span>&copy; 2021 <a href=https://0xdeface.github.io>Alexey Kolesnikov - my thoughts about it, life, books</a></span>

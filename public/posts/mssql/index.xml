@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MSSQL posts on Alexey Kolesnikov - my thoughts about it, life, books</title>
+    <link>https://0xdeface.github.io/posts/mssql/</link>
+    <description>Recent content in MSSQL posts on Alexey Kolesnikov - my thoughts about it, life, books</description>
+    <image>
+      <url>https://0xdeface.github.io/papermod-cover.png</url>
+      <link>https://0xdeface.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Fri, 04 Jun 2021 10:41:39 +1000</lastBuildDate><atom:link href="https://0xdeface.github.io/posts/mssql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MSSQL - Transaction Log</title>
+      <link>https://0xdeface.github.io/posts/mssql/transaction-log/</link>
+      <pubDate>Fri, 04 Jun 2021 10:41:39 +1000</pubDate>
+      
+      <guid>https://0xdeface.github.io/posts/mssql/transaction-log/</guid>
+      <description>descr</description>
+    </item>
+    
+    <item>
+      <title>My 1st post</title>
+      <link>https://0xdeface.github.io/posts/mssql/cluster-notes/</link>
+      <pubDate>Wed, 26 May 2021 10:15:20 +1000</pubDate>
+      
+      <guid>https://0xdeface.github.io/posts/mssql/cluster-notes/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+  </channel>
+</rss>

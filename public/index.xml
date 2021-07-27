@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Alexey Kolesnikov - my thoughts about it, life, books</title>
+    <link>https://0xdeface.github.io/</link>
+    <description>Recent content on Alexey Kolesnikov - my thoughts about it, life, books</description>
+    <image>
+      <url>https://0xdeface.github.io/papermod-cover.png</url>
+      <link>https://0xdeface.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Fri, 04 Jun 2021 10:41:39 +1000</lastBuildDate><atom:link href="https://0xdeface.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MSSQL - Transaction Log</title>
+      <link>https://0xdeface.github.io/posts/mssql/transaction-log/</link>
+      <pubDate>Fri, 04 Jun 2021 10:41:39 +1000</pubDate>
+      
+      <guid>https://0xdeface.github.io/posts/mssql/transaction-log/</guid>
+      <description>descr</description>
+    </item>
+    
+    <item>
+      <title>Materials</title>
+      <link>https://0xdeface.github.io/materials/</link>
+      <pubDate>Thu, 27 May 2021 09:08:12 +1000</pubDate>
+      
+      <guid>https://0xdeface.github.io/materials/</guid>
+      <description>Решил сформировать список материалов, книг, видеокурсов и статей которые изучил. Может быть это будет полезно для изучающих то или иное направление, постараюсь давать краткую рецензию.
+Golang   { e.nextSibling.style.display === &#39;none&#39; ? e.nextSibling.style.display=&#39;block&#39; : e.nextSibling.style.display = &#39;none&#39;; if (e.nextSibling.style.display === &#39;none&#39;) { e.querySelector(&#39;svg&#39;).classList.remove(&#39;fa-chevron-down&#39;) e.querySelector(&#39;svg&#39;).classList.add(&#39;fa-chevron-right&#39;) } else { e.querySelector(&#39;svg&#39;).classList.remove(&#39;fa-chevron-right&#39;) e.querySelector(&#39;svg&#39;).classList.add(&#39;fa-chevron-down&#39;) } } )(this)&#34;   [Статья] Официальный курс Golang. (Однозначно must have)   Yes !.   [Видео] OTUS. Разработчик Golang (2019) [Видео] Технострим.</description>
+    </item>
+    
+    <item>
+      <title>Eou Eot</title>
+      <link>https://0xdeface.github.io/posts/kkm/eou-eot/</link>
+      <pubDate>Wed, 26 May 2021 16:16:48 +1000</pubDate>
+      
+      <guid>https://0xdeface.github.io/posts/kkm/eou-eot/</guid>
+      <description>descr</description>
+    </item>
+    
+    <item>
+      <title>Dynamic Address List</title>
+      <link>https://0xdeface.github.io/posts/mikrotik/dynamic-address-list/</link>
+      <pubDate>Wed, 26 May 2021 10:25:11 +1000</pubDate>
+      
+      <guid>https://0xdeface.github.io/posts/mikrotik/dynamic-address-list/</guid>
+      <description>Интересная работа адрес листов в оборудовании Mikrotik</description>
+    </item>
+    
+    <item>
+      <title>My 1st post</title>
+      <link>https://0xdeface.github.io/posts/mssql/cluster-notes/</link>
+      <pubDate>Wed, 26 May 2021 10:15:20 +1000</pubDate>
+      
+      <guid>https://0xdeface.github.io/posts/mssql/cluster-notes/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    <item>
+      <title>Mikrotik recursive routes</title>
+      <link>https://0xdeface.github.io/posts/mikrotik/recursive-routes/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      
+      <guid>https://0xdeface.github.io/posts/mikrotik/recursive-routes/</guid>
+      <description>Desc Text.</description>
+    </item>
+    
+    
+    
+  </channel>
+</rss>
