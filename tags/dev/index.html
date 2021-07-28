@@ -54,6 +54,19 @@
 <figure class=entry-cover><img loading=lazy src=https://0xdeface.github.io/%3Cimage%20path/url%3E alt>
 </figure>
 <header class=entry-header>
+<h2>proxmox - Faq</h2>
+</header>
+<section class=entry-content>
+<p>Proxmox - как остановить VM которая не останавливается Бывает что машину не возможно остановить ни через веб интерфейс, ни используя команду qm shutdown VMID предлагаю использовать вот такую вспомогательную функцию на этот случай, разместить в .bashrc
+vm_interrupt() { pgrep -f "/usr/bin/kvm -id $1" | xargs kill -16 } использовать vm_interrupt </p>
+</section>
+<footer class=entry-footer>July 28, 2021&nbsp;·&nbsp;1 min&nbsp;·&nbsp;0xDEFACE</footer>
+<a class=entry-link aria-label="post link to proxmox - Faq" href=https://0xdeface.github.io/posts/proxmox/faq/></a>
+</article>
+<article class="post-entry tag-entry">
+<figure class=entry-cover><img loading=lazy src=https://0xdeface.github.io/%3Cimage%20path/url%3E alt>
+</figure>
+<header class=entry-header>
 <h2>MSSQL - Transaction Log</h2>
 </header>
 <section class=entry-content>
