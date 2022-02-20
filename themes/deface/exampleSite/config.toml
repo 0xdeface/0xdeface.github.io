@@ -1,39 +1,30 @@
-baseURL = "https://0xdeface.github.io/"
-languageCode = "ru-ru"
-title = "0xdeface"
-theme="deface"
-copyright = "© 0xdeface"
-# Code Highlight
+baseURL = "https://example.com"
+languageCode = "en-us"
+title = "Archie"
+theme="archie"
+copyright = "© Athul"
 pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
-
-paginate=3 # articles per page
-
 [params]
-	mode="auto" # color-mode → light,dark,toggle or auto
-	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
+	mode="auto"
+	useCDN=false
 	subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
-
-# Social Tags
 
 [[params.social]]
 name = "GitHub"
 icon = "github"
-url = "https://github.com/0xdeface/"
+url = "https://github.com/athul/archie"
 
 [[params.social]]
 name = "Twitter"
 icon = "twitter"
-url = "https://twitter.com/athulcajay/"
+url = "https://github.com/athulcajay/"
 
 [[params.social]]
 name = "GitLab"
 icon = "gitlab"
 url = "https://gitlab.com/athul/"
-
-# Main menu Items
-
 [[menu.main]]
 name = "Home"
 url = "/"
@@ -53,4 +44,3 @@ weight = 3
 name = "Tags"
 url = "/tags"
 weight = 4
-

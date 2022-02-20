@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://0xdeface.github.io/</loc>
+    <lastmod>2022-02-20T15:58:53+10:00</lastmod>
+  </url><url>
+    <loc>https://0xdeface.github.io/posts/hugo/</loc>
+    <lastmod>2022-02-20T15:58:53+10:00</lastmod>
+  </url><url>
+    <loc>https://0xdeface.github.io/posts/</loc>
+    <lastmod>2022-02-20T15:58:53+10:00</lastmod>
+  </url><url>
+    <loc>https://0xdeface.github.io/categories/</loc>
+  </url><url>
+    <loc>https://0xdeface.github.io/tags/</loc>
+  </url>
+</urlset>
