@@ -7,10 +7,10 @@ summary: "Набор этих компонентов стал для меня с
 ---
 
 1. ZSH - совместима с bash, лучше автодополнение и коррекция ошибок
-1. Oh My Zsh  - коллекция плагинов тюнит ваш шелл
+1. Oh My Zsh  - коллекция плагинов и улучшений для вашего zsh. 
 1. powerlevel10k/powerlevel10k - моя любимая zsh тема
-1. https://github.com/junegunn/fzf - fuzzy поиск, очень удобно
-1. fzf-tab автодополнение фази поиском
+1. https://github.com/junegunn/fzf - fuzzy search. поиск по частям слова. очень удобно
+1. fzf-tab автокомплит с использованием fzf
 
 ```bash
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -26,3 +26,5 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ```
+
+![пример консоли](/posts/linux-zsh.gif)
