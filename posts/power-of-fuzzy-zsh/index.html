@@ -1,0 +1,78 @@
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge"><title>Стандарт удобной консольки - 0xdeface</title><meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Набор этих компонентов стал для меня стандартом, возвращаться к классическому bash теперь не очень хочется">
+<meta property="og:image" content>
+<meta property="og:title" content="Стандарт удобной консольки">
+<meta property="og:description" content="Набор этих компонентов стал для меня стандартом, возвращаться к классическому bash теперь не очень хочется">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://0xdeface.github.io/posts/power-of-fuzzy-zsh/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2022-01-01T00:00:00+00:00">
+<meta property="article:modified_time" content="2022-01-01T00:00:00+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Стандарт удобной консольки">
+<meta name=twitter:description content="Набор этих компонентов стал для меня стандартом, возвращаться к классическому bash теперь не очень хочется">
+<script src=https://0xdeface.github.io/js/feather.min.js></script>
+<link href=https://0xdeface.github.io/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css rel=stylesheet>
+<link rel=stylesheet type=text/css media=screen href=https://0xdeface.github.io/css/main.40ca3a860425083862b7ebd55447caec5c4384573f0cb098b8d06a91e8dace2e.css>
+<link id=darkModeStyle rel=stylesheet type=text/css href=https://0xdeface.github.io/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css media="(prefers-color-scheme: dark)">
+</head>
+<body>
+<div class=content><header>
+<div class=main>
+<a href=https://0xdeface.github.io/>0xdeface</a>
+</div>
+<nav>
+<a href=/>Home</a>
+<a href=/posts>All posts</a>
+<a href=/about>About</a>
+<a href=/tags>Tags</a>
+</nav>
+</header>
+<main>
+<article>
+<div class=title>
+<h1 class=title>Стандарт удобной консольки</h1>
+<div class=meta>Posted on Jan 1, 2022</div>
+</div>
+<section class=body>
+<ol>
+<li>ZSH - совместима с bash, лучше автодополнение и коррекция ошибок</li>
+<li>Oh My Zsh - коллекция плагинов тюнит ваш шелл</li>
+<li>powerlevel10k/powerlevel10k - моя любимая zsh тема</li>
+<li><a href=https://github.com/junegunn/fzf>https://github.com/junegunn/fzf</a> - fuzzy поиск, очень удобно</li>
+<li>fzf-tab автодополнение фази поиском</li>
+</ol>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#66d9ef>if</span> <span style=color:#f92672>[[</span> -r <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>XDG_CACHE_HOME<span style=color:#66d9ef>:-</span>$HOME/.cache<span style=color:#e6db74>}</span><span style=color:#e6db74>/p10k-instant-prompt-</span><span style=color:#e6db74>${</span>(%)<span style=color:#66d9ef>:-</span>%n<span style=color:#e6db74>}</span><span style=color:#e6db74>.zsh&#34;</span> <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
+  source <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>XDG_CACHE_HOME<span style=color:#66d9ef>:-</span>$HOME/.cache<span style=color:#e6db74>}</span><span style=color:#e6db74>/p10k-instant-prompt-</span><span style=color:#e6db74>${</span>(%)<span style=color:#66d9ef>:-</span>%n<span style=color:#e6db74>}</span><span style=color:#e6db74>.zsh&#34;</span>
+<span style=color:#66d9ef>fi</span>
+export ZSH<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span>$HOME<span style=color:#e6db74>/.oh-my-zsh&#34;</span>
+ZSH_THEME<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;powerlevel10k/powerlevel10k&#34;</span>
+plugins<span style=color:#f92672>=(</span>git fzf-tab zsh-autosuggestions archlinux cp docker fzf gatsby github golang man npm npx<span style=color:#f92672>)</span>
+<span style=color:#75715e># BIND</span>
+bindkey <span style=color:#e6db74>&#39;^ &#39;</span> autosuggest-accept
+source $ZSH/oh-my-zsh.sh
+
+<span style=color:#f92672>[[</span> ! -f ~/.p10k.zsh <span style=color:#f92672>]]</span> <span style=color:#f92672>||</span> source ~/.p10k.zsh
+
+</code></pre></div>
+</section>
+<div class=post-tags>
+<nav class="nav tags">
+<ul class=tags>
+<li><a href=/tags/linux>linux</a></li>
+<li><a href=/tags/performance>performance</a></li>
+</ul>
+</nav>
+</div>
+</article>
+</main>
+<footer>
+<div style=display:flex><a class=soc href=https://github.com/0xdeface/ title=GitHub><i data-feather=github></i></a><a class=soc href=https://twitter.com/athulcajay/ title=Twitter><i data-feather=twitter></i></a><a class=soc href=https://gitlab.com/athul/ title=GitLab><i data-feather=gitlab></i></a></div>
+<div class=footer-info>
+2022 © 0xdeface | <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a>
+</div>
+</footer>
+<script>feather.replace()</script></div>
+</body>
+</html>
