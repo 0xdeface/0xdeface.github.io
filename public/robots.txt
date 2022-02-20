@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://0xdeface.github.io/sitemap.xml
