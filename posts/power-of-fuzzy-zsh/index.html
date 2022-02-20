@@ -39,10 +39,10 @@
 <section class=body>
 <ol>
 <li>ZSH - совместима с bash, лучше автодополнение и коррекция ошибок</li>
-<li>Oh My Zsh - коллекция плагинов тюнит ваш шелл</li>
+<li>Oh My Zsh - коллекция плагинов и улучшений для вашего zsh.</li>
 <li>powerlevel10k/powerlevel10k - моя любимая zsh тема</li>
-<li><a href=https://github.com/junegunn/fzf>https://github.com/junegunn/fzf</a> - fuzzy поиск, очень удобно</li>
-<li>fzf-tab автодополнение фази поиском</li>
+<li><a href=https://github.com/junegunn/fzf>https://github.com/junegunn/fzf</a> - fuzzy search. поиск по частям слова. очень удобно</li>
+<li>fzf-tab автокомплит с использованием fzf</li>
 </ol>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#66d9ef>if</span> <span style=color:#f92672>[[</span> -r <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>XDG_CACHE_HOME<span style=color:#66d9ef>:-</span>$HOME/.cache<span style=color:#e6db74>}</span><span style=color:#e6db74>/p10k-instant-prompt-</span><span style=color:#e6db74>${</span>(%)<span style=color:#66d9ef>:-</span>%n<span style=color:#e6db74>}</span><span style=color:#e6db74>.zsh&#34;</span> <span style=color:#f92672>]]</span>; <span style=color:#66d9ef>then</span>
   source <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>XDG_CACHE_HOME<span style=color:#66d9ef>:-</span>$HOME/.cache<span style=color:#e6db74>}</span><span style=color:#e6db74>/p10k-instant-prompt-</span><span style=color:#e6db74>${</span>(%)<span style=color:#66d9ef>:-</span>%n<span style=color:#e6db74>}</span><span style=color:#e6db74>.zsh&#34;</span>
@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 
 <span style=color:#f92672>[[</span> ! -f ~/.p10k.zsh <span style=color:#f92672>]]</span> <span style=color:#f92672>||</span> source ~/.p10k.zsh
 
-</code></pre></div>
+</code></pre></div><p><img src=/posts/linux-zsh.gif alt="пример консоли"></p>
 </section>
 <div class=post-tags>
 <nav class="nav tags">
