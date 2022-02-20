@@ -54,3 +54,7 @@ name = "Tags"
 url = "/tags"
 weight = 4
 
+[[menu.main]]
+name = "Tg chan"
+url = "https://t.me/bebetter_ch"
+weight = 4
