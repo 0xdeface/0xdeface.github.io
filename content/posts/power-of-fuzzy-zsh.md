@@ -26,5 +26,5 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ```
-
+## Пример оформления и fuzzy автодополнения команды dd
 ![пример консоли](/posts/linux-zsh.gif)
