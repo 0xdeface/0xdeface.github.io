@@ -1,5 +1,5 @@
 ---
-title: Удобный просмотр JSON в консоли
+title: Удобный просмотр JSON в консоле
 date: '2022-02-06'
 tags: ['linux', 'performance', 'tools']
 draft: false
