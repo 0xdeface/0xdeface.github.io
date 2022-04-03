@@ -23,11 +23,14 @@ This is the first post in a three part series that will provide an understanding
 Например размер кеша, количество ядер, объем памяти и многие другое. Без этих знаний планировщик не сможет быть таким эффективным как это было бы возможно.
 Ваша программа это просто набор машинных инструкции выполняемых последовательно, одна за одной. Операционная система использует концепцию потоков
 для реализации такого поведения. Работа потока заключается в учете и последовательном выполнении набора инструкции которые ему назначены.
+Выполнение останавливается когда не остается инструкций для выполнения.
+Каждя программа создается процесс и каждый процесс инициирует начальный поток. Потоки могут создавать новые потоки.
+Все различные потоки запущены независимо от друг друга. Решения планировщика принимаются на уровне потоков, а не процесса.
+Потоки могут работать конкурентно( на 1 ядре конкурируя за процессорное время) или паралельно(каждый на различном ядре).
 
-Your program is just a series of machine instructions that need to be executed one after the other sequentially. To make that happen, the operating system uses the concept of a Thread. It’s the job of the Thread to account for and sequentially execute the set of instructions it’s assigned. Execution continues until there are no more instructions for the Thread to execute. This is why I call a Thread, “a path of execution”.
-
-Every program you run creates a Process and each Process is given an initial Thread. Threads have the ability to create more Threads. All these different Threads run independently of each other and scheduling decisions are made at the Thread level, not at the Process level. Threads can run concurrently (each taking a turn on an individual core), or in parallel (each running at the same time on different cores). Threads also maintain their own state to allow for the safe, local, and independent execution of their instructions.
-
+Потоки могу управлять собственным состоянием локально и независимо выполняя свои инструкции.
+Планровщик отвечает за то чтобы ядра не простаивали когда существуют потоки к выполнению.
+Это так же должно создавать иллюзию что все потоки выполняются одновременно. 
 The OS scheduler is responsible for making sure cores are not idle if there are Threads that can be executing. It must also create the illusion that all the Threads that can execute are executing at the same time. In the process of creating this illusion, the scheduler needs to run Threads with a higher priority over lower priority Threads. However, Threads with a lower priority can’t be starved of execution time. The scheduler also needs to minimize scheduling latencies as much as possible by making quick and smart decisions.
 
 A lot goes into the algorithms to make this happen, but luckily there are decades of work and experience the industry is able to leverage. To understand all of this better, it’s good to describe and define a few concepts that are important.
