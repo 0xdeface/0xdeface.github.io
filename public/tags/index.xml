@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Archie</title>
-    <link>https://0xdeface.github.io/tags/</link>
-    <description>Recent content in Tags on Archie</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Tags on 0xdeface</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on 0xdeface</description>
+    <generator>Hugo</generator>
     <language>ru-ru</language>
-    <copyright>© 0xdeface</copyright><atom:link href="https://0xdeface.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 0xdeface</copyright>
+    <lastBuildDate>Fri, 02 May 2025 22:44:17 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Security</title>
+      <link>http://localhost:1313/tags/security/</link>
+      <pubDate>Fri, 02 May 2025 22:44:17 +1000</pubDate>
+      <guid>http://localhost:1313/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance</title>
+      <link>http://localhost:1313/tags/performance/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/performance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>http://localhost:1313/tags/tools/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Книги</title>
+      <link>http://localhost:1313/tags/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Развитие</title>
+      <link>http://localhost:1313/tags/%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5/</link>
+      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

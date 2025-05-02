@@ -8,8 +8,9 @@ pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-paginate=10 # articles per page
-
+# paginate=10 # articles per page
+[pagination]
+pageSize=10
 [params]
 	mode="auto" # color-mode → light,dark,toggle or auto
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
@@ -56,5 +57,5 @@ weight = 4
 
 [[menu.main]]
 name = "Tg chan"
-url = "https://t.me/bebetter_ch"
+url = "https://t.me/poisonbytes"
 weight = 4
