@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tools on 0xdeface</title><link>https://0xdeface.github.io/tags/tools/</link><description>Recent content in Tools on 0xdeface</description><generator>Hugo</generator><language>ru-ru</language><copyright>© 0xdeface</copyright><lastBuildDate>Sun, 06 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://0xdeface.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml"/><item><title>Удобный просмотр JSON в консоле</title><link>https://0xdeface.github.io/posts/linux-tools-fx/</link><pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate><guid>https://0xdeface.github.io/posts/linux-tools-fx/</guid><description>Рекомендую когда хочеться поклацать мышкой по json с большой вложенностью</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on 0xdeface</title>
+    <link>https://0xdeface.github.io/tags/tools/</link>
+    <description>Recent content in Tools on 0xdeface</description>
+    <generator>Hugo</generator>
+    <language>ru-ru</language>
+    <copyright>© 0xdeface</copyright>
+    <lastBuildDate>Sun, 06 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://0xdeface.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Удобный просмотр JSON в консоле</title>
+      <link>https://0xdeface.github.io/posts/linux-tools-fx/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://0xdeface.github.io/posts/linux-tools-fx/</guid>
+      <description>Рекомендую когда хочеться поклацать мышкой по json с большой вложенностью</description>
+    </item>
+  </channel>
+</rss>
