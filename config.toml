@@ -59,3 +59,7 @@ weight = 4
 name = "Tg chan"
 url = "https://t.me/poisonbytes"
 weight = 4
+
+[[menu.main]]
+name = "rack viewer"
+url = "rackviewer/index.html"

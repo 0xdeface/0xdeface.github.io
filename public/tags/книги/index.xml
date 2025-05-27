@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Книги on 0xdeface</title>
-    <link>https://0xdeface.github.io/tags/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/</link>
+    <link>http://localhost:1313/tags/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/</link>
     <description>Recent content in Книги on 0xdeface</description>
     <generator>Hugo</generator>
     <language>ru-ru</language>
     <copyright>© 0xdeface</copyright>
     <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://0xdeface.github.io/tags/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Читал недавно Шантарам, Грегори Дэвид Робертс</title>
-      <link>https://0xdeface.github.io/posts/shantaram/</link>
+      <link>http://localhost:1313/posts/shantaram/</link>
       <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://0xdeface.github.io/posts/shantaram/</guid>
+      <guid>http://localhost:1313/posts/shantaram/</guid>
       <description>Мысли о прочитанном</description>
     </item>
   </channel>

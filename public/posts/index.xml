@@ -2,46 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>0xdeface</title>
-    <link>https://0xdeface.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content on 0xdeface</description>
     <generator>Hugo</generator>
     <language>ru-ru</language>
     <copyright>© 0xdeface</copyright>
-    <lastBuildDate>Fri, 02 May 2025 22:44:17 +1000</lastBuildDate>
-    <atom:link href="https://0xdeface.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 May 2025 11:16:47 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Network troubleshooting</title>
+      <link>http://localhost:1313/posts/network/troubleshooting/</link>
+      <pubDate>Wed, 21 May 2025 11:16:47 +1000</pubDate>
+      <guid>http://localhost:1313/posts/network/troubleshooting/</guid>
+      <description>Опыт и рекомендации по поиску проблем с передачей данных с использованием wireshark. Так же пару советов что проверить в оборудовании Mikrotik</description>
+    </item>
+    <item>
+      <title>Routersploit - личный взгляд</title>
+      <link>http://localhost:1313/posts/security/routersploit/</link>
+      <pubDate>Wed, 07 May 2025 09:27:36 +1000</pubDate>
+      <guid>http://localhost:1313/posts/security/routersploit/</guid>
+      <description>впечатления от использования routersploit</description>
+    </item>
     <item>
       <title>Ресурс для изучения веб уязвимостей</title>
-      <link>https://0xdeface.github.io/posts/security/web-vuln-edu/</link>
+      <link>http://localhost:1313/posts/security/web-vuln-edu/</link>
       <pubDate>Fri, 02 May 2025 22:44:17 +1000</pubDate>
-      <guid>https://0xdeface.github.io/posts/security/web-vuln-edu/</guid>
+      <guid>http://localhost:1313/posts/security/web-vuln-edu/</guid>
       <description>&lt;h3 id=&#34;security-training-for-web-developers&#34;&gt;Security Training for Web Developers&lt;/h3&gt;&#xA;&lt;p&gt;На ресурсе можно почитать про основные веб уязвимости.&#xA;Основаная фишка ресурса в простоте, краткости и информативных и интерактивных слайдах.&#xA;&lt;a href=&#34;https://www.hacksplaining.com/lessons&#34;&gt;https://www.hacksplaining.com/lessons&lt;/a&gt;&#xA;По факту материал конечно изложен просто поверхностно, после прочтения сможешь классифицировать и понимать уязвимые места в веб приложениях.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Сбермаркет-meetup 1</title>
-      <link>https://0xdeface.github.io/posts/sbereteh/</link>
+      <link>http://localhost:1313/posts/sbereteh/</link>
       <pubDate>Mon, 21 Feb 2022 09:19:26 +1000</pubDate>
-      <guid>https://0xdeface.github.io/posts/sbereteh/</guid>
+      <guid>http://localhost:1313/posts/sbereteh/</guid>
       <description>&lt;h3 id=&#34;митап-от-сбермаркет---golang&#34;&gt;митап от сбермаркет - golang&lt;/h3&gt;&#xA;&lt;p&gt;темы рассматриваемые в встрече:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Генерация тестов&lt;/li&gt;&#xA;&lt;li&gt;Контроль над ошибками&lt;/li&gt;&#xA;&lt;li&gt;Генерация кода&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;На мой взгляд выступающие парни, молодцы как тимлиды, как спецы, но конкретно в этом&#xA;митапе ( возможно потому что он первый, возможно из за лимитов по времени) они дали&#xA;информацию кусками, причем многие вещи и так очевидны, а многие не полностью раскрыты.&lt;/p&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/na5eUf_cXbY?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;    &lt;/div&gt;</description>
     </item>
     <item>
       <title>Удобный просмотр JSON в консоле</title>
-      <link>https://0xdeface.github.io/posts/linux-tools-fx/</link>
+      <link>http://localhost:1313/posts/linux/linux-tools-fx/</link>
       <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://0xdeface.github.io/posts/linux-tools-fx/</guid>
+      <guid>http://localhost:1313/posts/linux/linux-tools-fx/</guid>
       <description>Рекомендую когда хочеться поклацать мышкой по json с большой вложенностью</description>
     </item>
     <item>
       <title>Читал недавно Шантарам, Грегори Дэвид Робертс</title>
-      <link>https://0xdeface.github.io/posts/shantaram/</link>
+      <link>http://localhost:1313/posts/shantaram/</link>
       <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://0xdeface.github.io/posts/shantaram/</guid>
+      <guid>http://localhost:1313/posts/shantaram/</guid>
       <description>Мысли о прочитанном</description>
     </item>
     <item>
       <title>Стандарт удобной консольки</title>
-      <link>https://0xdeface.github.io/posts/power-of-fuzzy-zsh/</link>
+      <link>http://localhost:1313/posts/linux/power-of-fuzzy-zsh/</link>
       <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://0xdeface.github.io/posts/power-of-fuzzy-zsh/</guid>
+      <guid>http://localhost:1313/posts/linux/power-of-fuzzy-zsh/</guid>
       <description>Набор этих компонентов стал для меня стандартом, возвращаться к классическому bash теперь не очень хочется</description>
     </item>
   </channel>

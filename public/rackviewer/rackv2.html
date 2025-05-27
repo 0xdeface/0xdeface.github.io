@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Схема коммутации в стойке</title>
+    <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body>
+    <h1>Схема коммутации в стойке</h1>
+    <div class="control-panel">
+        <h3>Управление конфигурацией</h3>
+        <textarea id="config-textarea" placeholder="Вставьте JSON конфигурации здесь"></textarea>
+        <div>
+            <button id="load-btn">Загрузить конфигурацию</button>
+            <button id="export-btn">Экспортировать в JSON</button>
+            <button id="add-device-btn">Добавить устройство</button>
+            <button id="clear-btn">Очистить все</button>
+        </div>
+    </div>
+
+    <div id="add-device-modal" class="modal">
+        <div class="modal-content">
+            <h3>Добавить новое устройство</h3>
+            <div class="form-row">
+                <label for="device-name">Имя устройства:</label>
+                <input type="text" id="device-name" placeholder="Например: SW-KHV-IND-1">
+            </div>
+            <div class="form-row">
+                <label for="port-type">Тип портов:</label>
+                <select id="port-type">
+                    <option value="ETH">ETH</option>
+                    <option value="SFP">SFP</option>
+                    <option value="COM">COM</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="port-count">Количество портов:</label>
+                <input type="number" id="port-count" min="1" max="48" value="8">
+            </div>
+            <div class="form-row">
+                <label for="start-port">Начальный номер порта:</label>
+                <input type="number" id="start-port" min="1" value="1">
+            </div>
+            <div>
+                <button id="save-device-btn">Сохранить устройство</button>
+                <button id="cancel-device-btn">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-port-modal" class="modal">
+        <div class="modal-content">
+            <h3>Настройка порта</h3>
+            <div class="form-row">
+                <label for="edit-port-name">Имя порта:</label>
+                <input type="text" id="edit-port-name" readonly>
+            </div>
+            <div class="form-row">
+                <label for="edit-vlan">VLAN:</label>
+                <input type="text" id="edit-vlan" placeholder="Через запятую, например: 1,10,20">
+            </div>
+            <div class="form-row">
+                <label for="edit-dst">Подключен к:</label>
+                <select id="edit-dst">
+                    <option value="">-- Не подключен --</option>
+                </select>
+            </div>
+            <div>
+                <button id="save-port-btn">Сохранить</button>
+                <button id="cancel-port-btn">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="context-menu" class="context-menu"></div>
+
+    <div class="cable-offset">
+        <div id="rack" class="rack"></div>
+        <div id="connection-info" class="connection-info"></div>
+    </div>
+    <svg id="cables-svg"></svg>
+    <script src="/assets/configuration.js">
+    </script>
+    <script src="/assets/main.js"></script>
+    <script>
+        initialize(PREDEFINED_CFG)
+    </script>
+</body>
+</html>

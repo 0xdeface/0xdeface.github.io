@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Security on 0xdeface</title>
-    <link>https://0xdeface.github.io/tags/security/</link>
+    <link>http://localhost:1313/tags/security/</link>
     <description>Recent content in Security on 0xdeface</description>
     <generator>Hugo</generator>
     <language>ru-ru</language>
     <copyright>© 0xdeface</copyright>
-    <lastBuildDate>Fri, 02 May 2025 22:44:17 +1000</lastBuildDate>
-    <atom:link href="https://0xdeface.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 May 2025 09:27:36 +1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Routersploit - личный взгляд</title>
+      <link>http://localhost:1313/posts/security/routersploit/</link>
+      <pubDate>Wed, 07 May 2025 09:27:36 +1000</pubDate>
+      <guid>http://localhost:1313/posts/security/routersploit/</guid>
+      <description>впечатления от использования routersploit</description>
+    </item>
     <item>
       <title>Ресурс для изучения веб уязвимостей</title>
-      <link>https://0xdeface.github.io/posts/security/web-vuln-edu/</link>
+      <link>http://localhost:1313/posts/security/web-vuln-edu/</link>
       <pubDate>Fri, 02 May 2025 22:44:17 +1000</pubDate>
-      <guid>https://0xdeface.github.io/posts/security/web-vuln-edu/</guid>
+      <guid>http://localhost:1313/posts/security/web-vuln-edu/</guid>
       <description>&lt;h3 id=&#34;security-training-for-web-developers&#34;&gt;Security Training for Web Developers&lt;/h3&gt;&#xA;&lt;p&gt;На ресурсе можно почитать про основные веб уязвимости.&#xA;Основаная фишка ресурса в простоте, краткости и информативных и интерактивных слайдах.&#xA;&lt;a href=&#34;https://www.hacksplaining.com/lessons&#34;&gt;https://www.hacksplaining.com/lessons&lt;/a&gt;&#xA;По факту материал конечно изложен просто поверхностно, после прочтения сможешь классифицировать и понимать уязвимые места в веб приложениях.&lt;/p&gt;</description>
     </item>
   </channel>
