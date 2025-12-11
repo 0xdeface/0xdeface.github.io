@@ -11,3 +11,6 @@ body {
 #navbarNav .nav-link:hover{
   color: rgb(70, 200, 200);
 }
+a {
+color: #a42016 !important;
+}
