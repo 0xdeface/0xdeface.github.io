@@ -1,0 +1,11 @@
+.feedcf-bg {
+    background-color: rgb(8, 30, 40) !important;
+    border-bottom: 3px solid #a42016;
+}
+
+#navbarNav .nav-link{
+  color: rgb(20, 162, 211);
+}
+#navbarNav .nav-link:hover{
+  color: rgb(70, 200, 200);
+}
