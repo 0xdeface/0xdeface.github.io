@@ -1,19 +1,31 @@
-<footer>
-  <div style="display:flex">
-    {{- range $index, $key := .Site.Params.Social -}}
-    <a class="soc" href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
-    {{- end -}}
-  </div>
-  <div class="footer-info">
-    {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} | {{ end }} 
+<footer class="bg-light py-3 mt-5">
+  <div class="container">
+    <!-- Социальные иконки -->
+    <div class="d-flex flex-wrap justify-content-center mb-2">
+      {{- range $index, $key := .Site.Params.Social -}}
+        <a class="text-decoration-none mx-2 text-dark" href="{{ $key.url }}" title="{{ $key.name }}" aria-label="{{ $key.name }}">
+          <i data-feather="{{ $key.icon }}" class="text-muted" style="width: 20px; height: 20px;"></i>
+        </a>
+      {{- end -}}
+    </div>
+
+    <!-- Информация об авторских правах -->
+    <div class="text-center text-muted small">
+      &copy; {{ dateFormat "2006" now }}
+      {{ with .Site.Copyright }} {{ . }} | {{ end }}
+      {{ with .Site.Title }}{{ . }}{{ end }}
+    </div>
   </div>
 </footer>
+
 {{ if not hugo.IsServer }}
-{{ template "_internal/google_analytics_async.html" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
 
 {{- if (isset .Site.Params "social") -}}
 <script>
-  feather.replace()
+  feather.replace({
+    'aria-hidden': 'true'
+  });
 </script>
 {{- end -}}

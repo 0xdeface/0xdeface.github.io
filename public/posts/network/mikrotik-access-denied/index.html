@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Mikrotik Access Denied - 0xdeface</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Советы по восстановлению доступа к Mikrotik:
+Если пришла печаль и доступа нет, вот список вещей которые стоит попробовать перед сбросом:
+
+Попробуйте подключится по mac адресу, если проблема в фильтрах ip то может помочь.
+Если сеть большая, попробуйте найти ближайший к потерянному микротик и с него подключится через Mac-telnet, это реально вещь которая спасает.
+Подключится напрямую кабелем и попробовать winbox соседи
+serial кабель
+Все больше вариантов я не знаю, пишите если что добавлю
+" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/posts/network/mikrotik-access-denied/">
+  <meta property="og:site_name" content="0xdeface">
+  <meta property="og:title" content="Mikrotik Access Denied">
+  <meta property="og:description" content="Советы по восстановлению доступа к Mikrotik: Если пришла печаль и доступа нет, вот список вещей которые стоит попробовать перед сбросом:
+Попробуйте подключится по mac адресу, если проблема в фильтрах ip то может помочь. Если сеть большая, попробуйте найти ближайший к потерянному микротик и с него подключится через Mac-telnet, это реально вещь которая спасает. Подключится напрямую кабелем и попробовать winbox соседи serial кабель Все больше вариантов я не знаю, пишите если что добавлю">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-11T11:02:41+10:00">
+    <meta property="article:modified_time" content="2025-12-11T11:02:41+10:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mikrotik Access Denied">
+  <meta name="twitter:description" content="Советы по восстановлению доступа к Mikrotik: Если пришла печаль и доступа нет, вот список вещей которые стоит попробовать перед сбросом:
+Попробуйте подключится по mac адресу, если проблема в фильтрах ip то может помочь. Если сеть большая, попробуйте найти ближайший к потерянному микротик и с него подключится через Mac-telnet, это реально вещь которая спасает. Подключится напрямую кабелем и попробовать winbox соседи serial кабель Все больше вариантов я не знаю, пишите если что добавлю">
+<script src="http://localhost:1313/js/feather.min.js"></script>
+	
+	
+        <link href="http://localhost:1313/css/fonts.b685ac6f654695232de7b82a9143a46f9e049c8e3af3a21d9737b01f4be211d1.css" rel="stylesheet">
+	
+	<script src="https://giscus.app/client.js"
+        data-repo="0xdeface/0xdeface.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnk2MDgyMzAxOA=="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOA6AV6s4CBP5x"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="ru"
+        crossorigin="anonymous"
+        async>
+</script>
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.457d9c01105d6c213163485001c982c6982b64936ecf8b99a426dd30dd9daaff.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.a5df7e056a8005697aa40fd296bfab4ac60e5ebcaffd085db30d3605c2406666.css" media="(prefers-color-scheme: dark)"  />
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header class="navbar navbar-expand-lg navbar-light bg-light feedcf-bg">
+  <div class="container">
+    
+    
+        <a class="navbar-brand" href="http://localhost:1313/"> <img src="/images/logo.png" alt="0xdeface" style="max-width:150px"></a>
+
+    
+    <button class="navbar-toggler" type="obutton" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">All posts</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://t.me/poisonbytes">Tg chan</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="rackviewer/index.html">rack viewer</a>
+        </li>
+        
+
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main class="container py-4">
+  <article>
+    <header class="mb-4">
+      <h1 class="display-5 fw-bold">Mikrotik Access Denied</h1>
+      <div class="text-muted small">
+        Posted on Dec 11, 2025
+        
+      </div>
+    </header>
+
+    
+
+    <section class="post-body mb-4">
+      <p>Советы по восстановлению доступа к Mikrotik:
+Если пришла печаль и доступа нет, вот список вещей которые стоит попробовать перед сбросом:</p>
+<ol>
+<li>Попробуйте подключится по mac адресу, если проблема в фильтрах ip то может помочь.</li>
+<li>Если сеть большая, попробуйте найти ближайший к потерянному микротик и с него подключится через Mac-telnet, это реально вещь которая спасает.</li>
+<li>Подключится напрямую кабелем и попробовать winbox соседи</li>
+<li>serial кабель
+Все больше вариантов я не знаю, пишите если что добавлю</li>
+</ol>
+
+    </section>
+
+    
+
+    <div class="giscus comments"></div>
+  </article>
+</main>
+<footer class="bg-light py-3 mt-5">
+  <div class="container">
+    
+    <div class="d-flex flex-wrap justify-content-center mb-2"><a class="text-decoration-none mx-2 text-dark" href="https://github.com/0xdeface/" title="GitHub" aria-label="GitHub">
+          <i data-feather="github" class="text-muted" style="width: 20px; height: 20px;"></i>
+        </a><a class="text-decoration-none mx-2 text-dark" href="https://twitter.com/un1qum/" title="Twitter" aria-label="Twitter">
+          <i data-feather="twitter" class="text-muted" style="width: 20px; height: 20px;"></i>
+        </a><a class="text-decoration-none mx-2 text-dark" href="https://gitlab.com/0xdeface/" title="GitLab" aria-label="GitLab">
+          <i data-feather="gitlab" class="text-muted" style="width: 20px; height: 20px;"></i>
+        </a></div>
+
+    
+    <div class="text-center text-muted small">
+      &copy; 2025
+       © 0xdeface | 
+      0xdeface
+    </div>
+  </div>
+</footer>
+
+<script>
+  feather.replace({
+    'aria-hidden': 'true'
+  });
+</script></div>
+    </body>
+</html>

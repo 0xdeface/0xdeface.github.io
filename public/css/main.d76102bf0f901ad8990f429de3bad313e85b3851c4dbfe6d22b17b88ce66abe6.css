@@ -1,9 +1,5 @@
 .feedcf-bg {
     background-color: rgb(8, 30, 40) !important;
-    border-bottom: 3px solid #a42016;
-}
-body {
-    background: #fefefe;
 }
 #navbarNav .nav-link{
   color: rgb(20, 162, 211);

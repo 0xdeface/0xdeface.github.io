@@ -1,36 +1,56 @@
 <!DOCTYPE html>
-<html>
-	{{ partial "header.html" . }}
-	<body>
-		<div class="content">
-			{{ partial "head.html" . }}
-			
-			<main class="list">
-				<div class="site-description">
-					{{- if isset .Site.Params "subtitle" -}}
-					<p>{{ .Site.Params.Subtitle | markdownify }}</p>
-					{{- end -}}
-				</div>
-				{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-				{{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
-				{{ range $paginator.Pages }}
-				<section class="list-item">
-					<h1 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1>
-					<time>{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
-					<br><div class="description">
-						{{ if isset .Params "description" }}
-						{{ .Description }}
-						{{ else }}
-						{{ .Summary }}&hellip;
-						{{ end }}
-					</div>
-					<a href="{{ .RelPermalink }}">Read more ⟶</a>
-				</section>
-				{{ end }}
-				{{ template "partials/paginator.html" . }}
-			</main>
-			{{ partial "footer.html" . }}
-		</div>
-		
-	</body>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  {{ partial "header.html" . }}
+  <body>
+    {{ partial "head.html" . }}
+    <div class="container-md py-4">
+      <main class="mb-5">
+        <!-- Описание сайта -->
+        {{- if isset .Site.Params "subtitle" -}}
+        <div class="row mb-4">
+          <div class="col">
+            <p class="text-muted">{{ .Site.Params.Subtitle | markdownify }}</p>
+          </div>
+        </div>
+        {{- end -}}
+
+        <!-- Список постов -->
+        {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+        {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+
+        {{ range $paginator.Pages }}
+        <article class="row mb-4 pb-3 border-bottom">
+          <div class="col">
+            <h2 class="h4 mb-1">
+              <a href="{{ .RelPermalink }}" class="text-decoration-none">{{ .Title }}</a>
+            </h2>
+            <div class="text-muted small d-flex align-items-center flex-wrap gap-2 mb-2">
+              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                {{ .Date.Format "Jan 2, 2006" }}
+              </time>
+              {{ if .Draft }}
+                <span class="badge bg-warning text-dark">DRAFT</span>
+              {{ end }}
+            </div>
+            <p class="mb-2">
+              {{ with .Description }}
+                {{ . }}
+              {{ else }}
+                {{ .Summary | truncate 160 "…" }}
+              {{ end }}
+            </p>
+            <a href="{{ .RelPermalink }}" class="btn btn-sm btn-outline-secondary">Read more ⟶</a>
+          </div>
+        </article>
+        {{ end }}
+
+        <!-- Пагинация -->
+        {{ template "partials/paginator.html" . }}
+      </main>
+
+    </div>
+      {{ partial "footer.html" . }}
+    <!-- Bootstrap JS (если используется) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jV" crossorigin="anonymous"></script>
+  </body>
 </html>

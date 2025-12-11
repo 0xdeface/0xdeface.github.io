@@ -1,34 +1,42 @@
 {{ define "main" }}
-<main>
-	<article>
-		<div class="title">
-			<h1 class="title">{{ .Title }}</h1>
-			<div class="meta">Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
-		</div>
-		{{ if isset .Params "tldr" }}
-		<div class="tldr">
-			<strong>tl;dr:</strong>
-			{{ .Params.tldr }}
-		</div>{{ end }}
+<main class="container py-4">
+  <article>
+    <header class="mb-4">
+      <h1 class="display-5 fw-bold">{{ .Title }}</h1>
+      <div class="text-muted small">
+        Posted on {{ .Date.Format "Jan 2, 2006" }}
+        {{ if .Draft }}
+          <span class="badge bg-warning text-dark ms-2">DRAFT</span>
+        {{ end }}
+      </div>
+    </header>
 
-		<section class="body">
-			{{ .Content }}
-		</section>
+    {{ with .Params.tldr }}
+    <div class="alert alert-info mb-4">
+      <strong>tl;dr:</strong> {{ . }}
+    </div>
+    {{ end }}
 
-		<div class="post-tags">
-			{{ if ne .Type "page" }}
-			{{ if gt .Params.tags 0 }}
-			<nav class="nav tags">
-				<ul class="tags">
-					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-					{{ end }}
-				</ul>
-			</nav>
-			{{ end }}
-			{{ end }}
-		</div>
-		<div class="giscus comments"></div>
-	</article>
+    <section class="post-body mb-4">
+      {{ .Content }}
+    </section>
+
+    {{ with .Params.tags }}
+    <div class="post-tags mb-4">
+      <strong>Tags:</strong>
+      <ul class="list-inline mt-2">
+        {{ range . }}
+        <li class="list-inline-item">
+          <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="badge bg-secondary text-decoration-none">
+            {{ . }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+
+    <div class="giscus comments"></div>
+  </article>
 </main>
 {{ end }}

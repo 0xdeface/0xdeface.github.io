@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Удобный просмотр JSON в консоле - 0xdeface</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Удобный просмотр JSON в консоле - 0xdeface</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Рекомендую когда хочеться поклацать мышкой по json с большой вложенностью" />
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content="http://localhost:1313/posts/linux/linux-tools-fx/">
@@ -40,45 +41,74 @@
         async>
 </script>
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.40ca3a860425083862b7ebd55447caec5c4384573f0cb098b8d06a91e8dace2e.css" />
-		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css" media="(prefers-color-scheme: dark)"  />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.457d9c01105d6c213163485001c982c6982b64936ecf8b99a426dd30dd9daaff.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.a5df7e056a8005697aa40fd296bfab4ac60e5ebcaffd085db30d3605c2406666.css" media="(prefers-color-scheme: dark)"  />
 	
 	
 	
 </head>
 <body>
-        <div class="content"><header>
-	<div class="main">
-		<a href="http://localhost:1313/">0xdeface</a>
-	</div>
-	<nav>
-		
-		<a href="/">Home</a>
-		
-		<a href="/posts">All posts</a>
-		
-		<a href="/about">About</a>
-		
-		<a href="/tags">Tags</a>
-		
-		<a href="https://t.me/poisonbytes">Tg chan</a>
-		
-		<a href="rackviewer/index.html">rack viewer</a>
-		
-		
-	</nav>
+        <div class="content"><header class="navbar navbar-expand-lg navbar-light bg-light feedcf-bg">
+  <div class="container">
+    
+    
+        <a class="navbar-brand" href="http://localhost:1313/"> <img src="/images/logo.png" alt="0xdeface" style="max-width:150px"></a>
+
+    
+    <button class="navbar-toggler" type="obutton" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">All posts</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/tags">Tags</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="https://t.me/poisonbytes">Tg chan</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="rackviewer/index.html">rack viewer</a>
+        </li>
+        
+
+        
+      </ul>
+    </div>
+  </div>
 </header>
 
-<main>
-	<article>
-		<div class="title">
-			<h1 class="title">Удобный просмотр JSON в консоле</h1>
-			<div class="meta">Posted on Feb 6, 2022</div>
-		</div>
-		
+<main class="container py-4">
+  <article>
+    <header class="mb-4">
+      <h1 class="display-5 fw-bold">Удобный просмотр JSON в консоле</h1>
+      <div class="text-muted small">
+        Posted on Feb 6, 2022
+        
+      </div>
+    </header>
 
-		<section class="body">
-			<h2 id="fx---open-source-cli-json-viewer">FX - open source cli json viewer</h2>
+    
+
+    <section class="post-body mb-4">
+      <h2 id="fx---open-source-cli-json-viewer">FX - open source cli json viewer</h2>
 <p>для установки используйте</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>npm install -g fx
 </span></span></code></pre></div><p>Теперь можете использовать fx через пайп например</p>
@@ -88,36 +118,62 @@
 </span></span></code></pre></div><p>Штука удобная в некоторых кейсах. Есть аналог на go (gofx) но я не использовал.</p>
 <!-- raw HTML omitted -->
 
-		</section>
+    </section>
 
-		<div class="post-tags">
-			
-			
-			<nav class="nav tags">
-				<ul class="tags">
-					
-					<li><a href="/tags/linux">linux</a></li>
-					
-					<li><a href="/tags/performance">performance</a></li>
-					
-					<li><a href="/tags/tools">tools</a></li>
-					
-				</ul>
-			</nav>
-			
-			
-		</div>
-		<div class="giscus comments"></div>
-	</article>
+    
+    <div class="post-tags mb-4">
+      <strong>Tags:</strong>
+      <ul class="list-inline mt-2">
+        
+        <li class="list-inline-item">
+          <a href="/tags/linux" class="badge bg-secondary text-decoration-none">
+            linux
+          </a>
+        </li>
+        
+        <li class="list-inline-item">
+          <a href="/tags/performance" class="badge bg-secondary text-decoration-none">
+            performance
+          </a>
+        </li>
+        
+        <li class="list-inline-item">
+          <a href="/tags/tools" class="badge bg-secondary text-decoration-none">
+            tools
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+    
+
+    <div class="giscus comments"></div>
+  </article>
 </main>
-<footer>
-  <div style="display:flex"><a class="soc" href="https://github.com/0xdeface/" title="GitHub"><i data-feather="github"></i></a><a class="soc" href="https://twitter.com/un1qum/" title="Twitter"><i data-feather="twitter"></i></a><a class="soc" href="https://gitlab.com/0xdeface/" title="GitLab"><i data-feather="gitlab"></i></a></div>
-  <div class="footer-info">
-    2025  © 0xdeface |  
+<footer class="bg-light py-3 mt-5">
+  <div class="container">
+    
+    <div class="d-flex flex-wrap justify-content-center mb-2"><a class="text-decoration-none mx-2 text-dark" href="https://github.com/0xdeface/" title="GitHub" aria-label="GitHub">
+          <i data-feather="github" class="text-muted" style="width: 20px; height: 20px;"></i>
+        </a><a class="text-decoration-none mx-2 text-dark" href="https://twitter.com/un1qum/" title="Twitter" aria-label="Twitter">
+          <i data-feather="twitter" class="text-muted" style="width: 20px; height: 20px;"></i>
+        </a><a class="text-decoration-none mx-2 text-dark" href="https://gitlab.com/0xdeface/" title="GitLab" aria-label="GitLab">
+          <i data-feather="gitlab" class="text-muted" style="width: 20px; height: 20px;"></i>
+        </a></div>
+
+    
+    <div class="text-center text-muted small">
+      &copy; 2025
+       © 0xdeface | 
+      0xdeface
+    </div>
   </div>
 </footer>
+
 <script>
-  feather.replace()
+  feather.replace({
+    'aria-hidden': 'true'
+  });
 </script></div>
     </body>
 </html>
